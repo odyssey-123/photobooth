@@ -81,6 +81,8 @@ video{
 
     border-radius:15px;
 
+    transform: scaleX(-1);
+
 }
 
 canvas{
@@ -172,6 +174,7 @@ button{
     font-weight:bold;
 
 }
+
 
 @media(max-width:600px){
 
