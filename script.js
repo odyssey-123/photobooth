@@ -44,7 +44,13 @@ captureBtn.addEventListener("click", () => {
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
 
-    ctx.drawImage(video, 0, 0);
+   ctx.save();
+
+ctx.scale(-1, 1);
+
+ctx.drawImage(video, -canvas.width, 0, canvas.width, canvas.height);
+
+ctx.restore();
 
     canvas.style.display = "block";
     video.style.display = "none";
