@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Photo Booth</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📸 Snap a Memory</h1>
+
+    <p>
+        Take a photo and help us remember this special day ❤️
+    </p>
+
+    <div class="camera-box">
+
+        <video id="video" autoplay playsinline></video>
+
+        <canvas id="canvas"></canvas>
+
+    </div>
+
+    <button id="captureBtn">
+        📷 Take Photo
+    </button>
+
+    <button id="retakeBtn" style="display:none;">
+        🔄 Retake
+    </button>
+
+    <button id="uploadBtn" style="display:none;">
+        ☁ Upload Photo
+    </button>
+
+    <div id="loading" style="display:none;">
+        Uploading...
+    </div>
+
+    <div id="success" style="display:none;">
+        ❤️ Thank you!
+        <br><br>
+        Your photo has been uploaded.
+    </div>
+
+</div>
+
+<script src="supabase.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
